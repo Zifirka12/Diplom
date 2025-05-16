@@ -27,7 +27,7 @@ class TestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Test
         fields = ['id', 'title', 'description', 'passing_score', 
-                 'created_at', 'updated_at', 'questions', 'questions_count']
+                 'created_at', 'updated_at', 'questions', 'questions_count', 'lesson']
 
     def get_questions_count(self, obj):
         return obj.questions.count()

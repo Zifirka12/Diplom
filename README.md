@@ -32,12 +32,12 @@ source venv/bin/activate  # Для Windows: venv\Scripts\activate
 ```
 
 3. Установите зависимости:
-```bash
+   ```bash
 pip install -r requirements.txt
-```
+   ```
 
 4. Создайте файл .env:
-```bash
+   ```bash
 cp .env.example .env
 # Отредактируйте .env, указав свои настройки
 ```
@@ -53,15 +53,15 @@ python manage.py migrate
 ```
 
 7. Создайте суперпользователя:
-```bash
+   ```bash
 python manage.py createsuperuser
-```
+   ```
 
 ## Запуск сервера разработки
 
-```bash
+   ```bash
 python manage.py runserver
-```
+   ```
 
 API будет доступен по адресу http://localhost:8000/api/v1/
 Документация API доступна по адресам:
