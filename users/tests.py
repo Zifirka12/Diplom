@@ -21,7 +21,7 @@ class UserModelTest(APITestCase):
         )
         self.assertEqual(user.email, self.user_data["email"])
         self.assertTrue(user.check_password(self.user_data["password"]))
-        self.assertEqual(str(user), self.user_data["email"])
+        self.assertEqual(str(user), f"{user.username} ({user.email})")
 
 class UserAPITests(APITestCase):
 
