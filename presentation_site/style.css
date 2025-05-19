@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #222;
+    min-height: 100vh;
+    transition: background 0.7s;
+}
+.container {
+    max-width: 650px;
+    margin: 80px auto 0 auto;
+    background: rgba(255,255,255,0.92);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(255, 140, 80, 0.18);
+    padding: 44px 36px 36px 36px;
+    text-align: center;
+    animation: fadeIn 1.2s;
+    border: 2px solid #ffb88c;
+}
+h1 {
+    font-size: 2.7rem;
+    margin-bottom: 0.5em;
+    color: #ff7e5f;
+    text-shadow: 1px 2px 8px #fff2e0;
+}
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+    color: #ff7e5f;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+button {
+    background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 36px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(255,126,95,0.15);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+button:hover {
+    background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 4px 18px rgba(255,126,95,0.25);
+}
+.fade-in {
+    animation: fadeIn 1.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.slide-in {
+    animation: slideIn 0.8s;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.hidden {
+    display: none;
+}
+.slide {
+    background: rgba(255,255,255,0.98);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(255, 140, 80, 0.10);
+    padding: 32px 24px 24px 24px;
+    margin: 32px auto 0 auto;
+    max-width: 700px;
+    border: 1.5px solid #ffb88c;
+    position: relative;
+}
+.slide img {
+    max-width: 90%;
+    margin: 18px auto 18px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255,126,95,0.13);
+}
+.slide h2, .slide h3 {
+    color: #ff7e5f;
+    margin-top: 0.5em;
+}
+.slide ul, .slide ol {
+    color: #222;
+    font-size: 1.08rem;
+    margin-bottom: 1.2em;
+}
+@media (max-width: 700px) {
+    .container, .slide {
+        max-width: 98vw;
+        padding: 18px 4vw 18px 4vw;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+} 
