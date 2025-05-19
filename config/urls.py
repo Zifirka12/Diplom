@@ -10,6 +10,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
     TokenVerifyView,
 )
+from django.http import HttpResponse
 
 # Swagger/OpenAPI documentation
 schema_view = get_schema_view(
@@ -26,6 +27,32 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    # Приветственная страница
+    path('', lambda request: HttpResponse('''
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Добро пожаловать!</title>
+            <style>
+                body { font-family: "Segoe UI", Arial, sans-serif; background: #fdf6f0; color: #222; text-align: center; margin: 0; padding: 0; }
+                .welcome { margin: 60px auto 0 auto; background: #fff7f2; border-radius: 18px; box-shadow: 0 4px 24px #ffb88c33; max-width: 480px; padding: 36px 24px; }
+                h1 { color: #ff7e5f; }
+                a { display: block; margin: 18px auto; color: #ff7e5f; font-size: 1.2rem; text-decoration: none; border-radius: 8px; padding: 10px 0; background: #fff0e6; transition: background 0.2s; }
+                a:hover { background: #ffecd2; }
+            </style>
+        </head>
+        <body>
+            <div class="welcome">
+                <h1>Добро пожаловать на платформу самообучения!</h1>
+                <p>Выберите раздел:</p>
+                <a href="/swagger/">Документация Swagger</a>
+                <a href="/redoc/">Документация ReDoc</a>
+                <a href="/api/v1/">API (v1)</a>
+                <a href="/admin/">Админ-панель</a>
+            </div>
+        </body>
+        </html>
+    ''', content_type="text/html; charset=utf-8")),
     # Admin
     path('admin/', admin.site.urls),
     
